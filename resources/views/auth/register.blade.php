@@ -45,6 +45,19 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" class="form-control @error('role') is-invalid @enderror" name="role">
+                        <option class="p-3" value="user">User</option>
+                        <option class="p-3" value="writer">Writer</option>
+                    </select>
+                    @error('role')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                           
 
                 <div class="form-group">
                     <label for="password" class="d-block">Password</label>
