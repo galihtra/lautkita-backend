@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryPostController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Models\CategoryPost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,24 +30,13 @@ Route::middleware(['auth','verified'])->group(function () {
     })->name('profile.edit')->middleware('can:dashboard');
 
     Route::resource('user',UserController::class);
+    Route::resource('article',PostController::class);
+
+    Route::get('article/posts/checkSlug',[PostController::class,'checkSlug']);
+
+    Route::get('categories-post',[CategoryPostController::class,'index'])->name('categories-post.index');
+    Route::post('categories-post', [CategoryPostController::class, 'store'])->name('categories-post.store');
+    Route::delete('categories-post/{category}', [CategoryPostController::class, 'destroy'])->name('categories-post.destroy');
+
 });
 
-    // Route::get('/login', function () {
-    //     return view('auth.login');
-    // });
-
-    // Route::get('/register', function () {
-    //     return view('auth.register');
-    // });
-
-    // Route::get('/reset', function () {
-    //     return view('auth.reset');
-    // });
-
-    // Route::get('/forgot', function () {
-    //     return view('auth.forgot');
-    // });
-
-    // Route::get('/verify', function () {
-    //     return view('auth.verify');
-    // });
