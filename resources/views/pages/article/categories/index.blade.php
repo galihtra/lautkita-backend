@@ -20,51 +20,53 @@
                 </div>
             @endif
 
-            <div class="section-body">
-                <div class="table-responsive">
-                    <!-- Button trigger modal -->
-                    <div class="buttons">
-                        <button class="btn btn-primary" id="modal-5">Create New Category</button>
-                    </div>
-
-                    <form class="modal-part" id="modal-categoryPost-part">
-                        @csrf
-                        <div class="form-group mb-3">
-                            <label class="mb-2" for="name">Nama Category</label>
-                            <input type="text" class="form-control" name="name" id="name" required>
+            <div class="card p-3">
+                <div class="section-body">
+                    <div class="table-responsive">
+                        <!-- Button trigger modal -->
+                        <div class="buttons mb-3">
+                            <button class="btn btn-primary" id="modal-5">Create New Category</button>
                         </div>
-                        <div class="form-group mb-3">
-                            <label class="mb-2" for="slug">Slug</label>
-                            <input type="text" class="form-control" name="slug" id="slug" required>
-                        </div>
-                    </form>
-
-                    <table class="table table-striped table-sm">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Category Name</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($categories as $category)
+    
+                        <form class="modal-part" id="modal-categoryPost-part">
+                            @csrf
+                            <div class="form-group mb-3">
+                                <label class="mb-2" for="name">Nama Category</label>
+                                <input type="text" class="form-control" name="name" id="name" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="mb-2" for="slug">Slug</label>
+                                <input type="text" class="form-control" name="slug" id="slug" required>
+                            </div>
+                        </form>
+    
+                        <table class="table table-striped table-sm">
+                            <thead>
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>
-                                        <form action="{{ route('categories-post.destroy', $category->id) }}" method="post"
-                                            class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class="btn btn-danger border-0 btn-sm"
-                                                onclick="return confirm('Are you sure?')">Delete</button>
-                                        </form>
-                                    </td>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Category Name</th>
+                                    <th scope="col">Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($categories as $category)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $category->name }}</td>
+                                        <td>
+                                            <form action="{{ route('categories-post.destroy', $category->id) }}" method="post"
+                                                class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn-danger border-0 btn-sm"
+                                                    onclick="return confirm('Are you sure?')">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>

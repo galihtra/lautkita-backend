@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\CategoryPost;
 use App\Models\OrderItem;
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,6 +30,38 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             OrderSeeder::class,
             OrderItemSeeder::class,
+        ]);
+
+        Post::create([
+            'title' => "Judul Pertama",
+            'category_id' => 1,
+            'user_id' => 23,
+            'slug' => "judul-pertama",
+            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
+            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
+        ]);
+
+        Post::create([
+            'title' => "Judul Kedua",
+            'category_id' => 1,
+            'user_id' => 23,
+            'slug' => "judul-kedua",
+            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
+            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
+        ]);
+
+        Post::create([
+            'title' => "Judul Ketiga",
+            'category_id' => 1,
+            'user_id' => 23,
+            'slug' => "judul-ketiga",
+            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
+            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
+        ]);
+
+        CategoryPost::create([
+            'name' => 'cinta laut',
+            'slug' => 'cinta-laut'
         ]);
     }
 }

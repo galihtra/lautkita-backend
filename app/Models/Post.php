@@ -12,6 +12,8 @@ class Post extends Model
     use Sluggable;
 
     protected $fillable = ['user_id','title', 'category_id', 'image', 'slug', 'excerpt', 'body'];
+
+    
     protected $with = ['category', 'author'];
 
     public function scopeFilter($query, array $filters)
@@ -42,7 +44,7 @@ class Post extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(CategoryPost::class);
     }
     public function author()
     {
