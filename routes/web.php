@@ -34,6 +34,8 @@ Route::middleware(['auth','verified'])->group(function () {
     // Route::resource('article',PostController::class);
     Route::prefix('article')->group(function () {
         Route::get('/', [PostController::class, 'index'])->name('article.index');
+        Route::get('create/', [PostController::class, 'create'])->name('article.create');
+        Route::post('create-post/', [PostController::class, 'store'])->name('article.store');
         Route::get('show/{slug}', [PostController::class, 'show'])->name('article.show');
         Route::delete('{slug}', [PostController::class, 'destroy'])->name('article.destroy');
         Route::get('posts/checkSlug', [PostController::class, 'checkSlug']);

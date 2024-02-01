@@ -23,7 +23,7 @@
             <div class="card p-3">
                 <div class="section-body">
                     <div class="table-responsive">
-                        <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
+                        <a href="{{ route('article.create') }}" class="btn btn-primary mb-3">Create new post</a>
                         <table class="table table-striped table-sm">
                             <thead>
                                 <tr>

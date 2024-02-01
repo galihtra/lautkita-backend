@@ -38,8 +38,14 @@ class PostController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            // Simpan gambar ke direktori yang benar
+            $validatedData['image'] = $request->file('image')->store('public/post-images');
+            
+            // Dapatkan path gambar yang disimpan di storage
+            $path = str_replace('public', 'storage', $validatedData['image']);
+            $validatedData['image'] = $path;
         }
+
 
         $validatedData['user_id'] = auth()->user()->id;
         // ambil hanya 200 kata untuk excerpt
@@ -48,7 +54,7 @@ class PostController extends Controller
         // insert data
         Post::create($validatedData);
 
-        return redirect('/dashboard/posts')->with(
+        return redirect('article')->with(
             'success',
             'New post has been added!'
         );
