@@ -40,7 +40,7 @@ class PostController extends Controller
         if ($request->file('image')) {
             // Simpan gambar ke direktori yang benar
             $validatedData['image'] = $request->file('image')->store('public/post-images');
-            
+
             // Dapatkan path gambar yang disimpan di storage
             $path = str_replace('public', 'storage', $validatedData['image']);
             $validatedData['image'] = $path;
@@ -70,16 +70,18 @@ class PostController extends Controller
     }
 
 
-    public function edit(Post $post)
+    public function edit($slug)
     {
+        $post = Post::where('slug', $slug)->firstOrFail();
         return view('pages.article.posts.edit', [
             'post' => $post,
             'categories' => CategoryPost::all()
         ]);
     }
 
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $slug)
     {
+        $post = Post::where('slug', $slug)->firstOrFail();
         $rules = [
             'title' => 'required|max:255',
             'category_id' => 'required',
@@ -94,25 +96,28 @@ class PostController extends Controller
         $validatedData = $request->validate($rules);
 
         if ($request->file('image')) {
-            if ($request->oldImage) {
-                Storage::delete($request->oldImage);
+            if ($post->image) {
+                Storage::delete(str_replace('storage/', 'public/', $post->image));
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = $request->file('image')->store('public/post-images');
+            // Dapatkan path gambar yang disimpan di storage
+            $path = str_replace('public', 'storage', $validatedData['image']);
+            $validatedData['image'] = $path;
         }
 
         $validatedData['user_id'] = auth()->user()->id;
         // ambil hanya 200 kata untuk excerpt
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
-        // insert data
-        Post::where('id', $post->id)
-            ->update($validatedData);
+        // update data
+        $post->update($validatedData);
 
-        return redirect('/dashboard/posts')->with(
+        return redirect('article')->with(
             'success',
             'Post has been updated!'
         );
     }
+
 
     public function destroy($slug)
     {

@@ -44,7 +44,8 @@
                                                 class="badge bg-info">
                                                 <i class="fas fa-eye text-white"></i> <span class="text-white">View</span>
                                             </a>
-                                            <a href="article/{{ $post->slug }}/edit" class="badge bg-warning">
+                                            <a href="{{ route('article.edit', ['slug' => $post->slug]) }}"
+                                                class="badge bg-warning">
                                                 <i class="fas fa-edit text-white"></i> <span class="text-white">Edit</span>
                                             </a>
                                             <form action="{{ route('article.destroy', $post->slug) }}" method="post"

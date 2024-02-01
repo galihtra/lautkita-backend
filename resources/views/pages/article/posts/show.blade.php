@@ -21,7 +21,7 @@
                             <a href="/article" class="btn btn-success"><span data-feather="arrow-left"></span> Back to
                                 my all
                                 posts</a>
-                            <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning"><span
+                            <a href="{{ route('article.edit', ['slug' => $post->slug]) }}" class="btn btn-warning"><span
                                     data-feather="edit"></span> Edit</a>
                             <form action="{{ route('article.destroy', $post->slug) }}" method="post" class="d-inline">
                                 @method('delete')
