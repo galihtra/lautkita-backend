@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\BannerController;
 use App\Http\Controllers\Api\CallbackController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\PostApiController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\UploadController;
 use Illuminate\Http\Request;
@@ -38,3 +39,8 @@ Route::post('midtrans/notification/handling', [CallbackController::class, 'callb
 Route::apiResource('categories', CategoryController::class);
 Route::apiResource('banners', BannerController::class);
 Route::apiResource('products', ProductController::class);
+
+Route::prefix('posts')->group(function () {
+    Route::get('/', [PostApiController::class, 'index']);
+    Route::get('/{id}', [PostApiController::class, 'show']);
+});
