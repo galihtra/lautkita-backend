@@ -20,7 +20,7 @@
                 </ul>
             </li>
             @if(auth()->user()->role == 'writer')
-            <li class="nav-item {{ request()->routeIs('article.index') ? 'active' : '' }}">
+            <li class="nav-item {{ request()->routeIs('article.index') || request()->routeIs('article.show') ||  request()->routeIs('article.edit')? 'active' : '' }}">
                 <a href="{{ route('article.index') }}" class="nav-link"><i class="fas fa-file-text"></i><span>My Posts</span></a>
             </li>
             <li class="nav-item {{ request()->routeIs('categories-post.index') ? 'active' : '' }}">
