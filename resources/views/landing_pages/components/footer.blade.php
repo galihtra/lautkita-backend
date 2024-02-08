@@ -11,14 +11,12 @@
         <div class="row footer-widget-area">
             <div class="col-md-3">
                 <div class="py-3">
-                    <img src="img/logo-white.svg" alt="FOI">
+                    <img src="../img/logo-white.svg" alt="FOI">
                 </div>
                 <p class="font-os font-weight-semibold mb3">Get our mobile app</p>
                 <div>
-                    <button class="btn btn-app-download mr-2"><img src="img/ios.svg"
-                            alt="App store"></button>
-                    <button class="btn btn-app-download"><img src="img/android.svg"
-                            alt="play store"></button>
+                    <button class="btn btn-app-download mr-2"><img src="../img/ios.svg" alt="App store"></button>
+                    <button class="btn btn-app-download"><img src="../img/android.svg" alt="play store"></button>
                 </div>
             </div>
             <div class="col-md-3 mt-3 mt-md-0">
@@ -66,15 +64,15 @@
             </div>
             <div class="col-md-3 mt-3 mt-md-0">
                 <p>
-                    &copy; foi. 2020 <a href="https://www.bootstrapdash.com" target="_blank"
-                        rel="noopener noreferrer" class="text-reset">BootstrapDash</a>.
+                    &copy; foi. 2020 <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer"
+                        class="text-reset">BootstrapDash</a>.
                 </p>
                 <p>All rights reserved.</p>
                 <nav class="social-menu">
-                    <a href="#!"><img src="img/facebook.svg" alt="facebook"></a>
-                    <a href="#!"><img src="img/instagram.svg" alt="instagram"></a>
-                    <a href="#!"><img src="img/twitter.svg" alt="twitter"></a>
-                    <a href="#!"><img src="img/youtube.svg" alt="youtube"></a>
+                    <a href="#!"><img src="../img/facebook.svg" alt="facebook"></a>
+                    <a href="#!"><img src="../img/instagram.svg" alt="instagram"></a>
+                    <a href="#!"><img src="../img/twitter.svg" alt="twitter"></a>
+                    <a href="#!"><img src="../img/youtube.svg" alt="youtube"></a>
                 </nav>
             </div>
         </div>

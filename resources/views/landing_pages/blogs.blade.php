@@ -73,7 +73,7 @@
 
                                     <p class="card-text">{{ $posts[0]->excerpt }}</p>
 
-                                    <a href="/posts/{{ $posts[0]->slug }}"
+                                    <a href="/blog/{{ $posts[0]->slug }}"
                                         class="text-decoration-none btn btn-primary">Read more</a>
 
                                 </div>
@@ -91,7 +91,7 @@
                                                         class="text-white text-decoration-none">{{ $post->category->name }}</a>
                                                 </div>
                                                 @if ($post->image)
-                                                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
+                                                <img src="{{ asset($post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
                                                 @else
                                                     <img src="https://source.unsplash.com/1200x400/?{{ $post->category->name }}"
                                                         alt="{{ $post->category->name }}" class="img-fluid">
@@ -106,7 +106,7 @@
                                                         </small>
                                                     </p>
                                                     <p class="card-text">{{ $post->excerpt }}</p>
-                                                    <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read
+                                                    <a href="/blog/{{ $post->slug }}" class="btn btn-primary">Read
                                                         more</a>
                                                 </div>
                                             </div>
