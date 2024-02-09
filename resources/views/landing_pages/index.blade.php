@@ -66,7 +66,7 @@ style="background-image: url(../img/bg_1@2x.svg), url(../img/bg_2@2x.svg);">
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="img/app_1.png" alt="app" width="388px" class="img-fluid">
+                <img src="img/app1_3d.svg" alt="app" width="430px" " class="img-fluid">
             </div>
         </div>
     </div>
@@ -184,7 +184,7 @@ style="background-image: url(../img/bg_1@2x.svg), url(../img/bg_2@2x.svg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-5 mb-md-0">
-                    <img src="img/app_2.png" alt="special offers" class="img-fluid" width="492px">
+                    <img src="img/app2_3d.svg" alt="special offers" class="img-fluid" width="492px">
                 </div>
                 <div class="col-md-6">
                     <h2 class="section-title">Get special offers on the things you love</h2>
