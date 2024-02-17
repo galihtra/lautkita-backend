@@ -42,10 +42,10 @@ class PostController extends Controller
             $validatedData['image'] = $request->file('image')->store('public/post-images');
 
             // Dapatkan path gambar yang disimpan di storage
-            $path = str_replace('public', 'storage', $validatedData['image']);
-            $validatedData['image'] = $path;
+            $publicImagePath = str_replace('public/', '', $validatedData['image']);
+            $url = Storage::url($publicImagePath);
+            $validatedData['image'] = $url;
         }
-
 
         $validatedData['user_id'] = auth()->user()->id;
         // ambil hanya 200 kata untuk excerpt
@@ -101,8 +101,9 @@ class PostController extends Controller
             }
             $validatedData['image'] = $request->file('image')->store('public/post-images');
             // Dapatkan path gambar yang disimpan di storage
-            $path = str_replace('public', 'storage', $validatedData['image']);
-            $validatedData['image'] = $path;
+            $publicImagePath = str_replace('public/', '', $validatedData['image']);
+            $url = Storage::url($publicImagePath);
+            $validatedData['image'] = $url;
         }
 
         $validatedData['user_id'] = auth()->user()->id;
