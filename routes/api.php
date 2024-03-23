@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\PostApiController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\UploadController;
+use App\Http\Controllers\Api\CampaignController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +45,12 @@ Route::prefix('posts')->group(function () {
     Route::get('/', [PostApiController::class, 'index']);
     Route::get('/{id}', [PostApiController::class, 'show']);
 });
+
+Route::get('/community/mycampaign', [CampaignController::class, 'show']);
+
+Route::get('/test', function() {
+    return response([
+        'message' => 'API Working'
+    ], 200);
+});
+
