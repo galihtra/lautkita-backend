@@ -36,73 +36,12 @@ class DatabaseSeeder extends Seeder
             'title' => "Judul Pertama",
             'category_id' => 1,
             'user_id' => 23,
+            'image' => "/storage/post-images/QA1QXB83FXQk9bm7dEmkhXtINF7t2Y0pwUC8PRNs.jpg",
             'slug' => "judul-pertama",
             'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
             'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
         ]);
 
-        Post::create([
-            'title' => "Judul Kedua",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-kedua",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-
-        Post::create([
-            'title' => "Judul Ketiga",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-ketiga",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-
-        Post::create([
-            'title' => "Judul Keempat",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-keempat",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-        
-        Post::create([
-            'title' => "Judul Kelima",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-kelima",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-
-        Post::create([
-            'title' => "Judul Keenam",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-keenam",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-
-        Post::create([
-            'title' => "Judul Ketujuh",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-ketujuh",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
-
-        Post::create([
-            'title' => "Judul Kedelapan",
-            'category_id' => 1,
-            'user_id' => 23,
-            'slug' => "judul-kedelapan",
-            'excerpt' => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore.",
-            'body' => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium alias error ad placeat hic dolore ipsa natus, quia libero veritatis.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae nobis itaque enim deleniti quibusdam at est iste impedit natus!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem earum quasi fuga? Est ad sed cum. Debitis, suscipit fugit. Fuga.</p>"
-        ]);
 
         CategoryPost::create([
             'name' => 'cinta laut',
